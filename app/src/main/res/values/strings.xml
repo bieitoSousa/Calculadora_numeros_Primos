@@ -1,0 +1,18 @@
+<resources>
+    <!--
+        Salto de linea      =>   [\n]
+    -->
+    <string name="app_name">PMDM02</string>
+    <string name="action_settings">Settings</string>
+    <string name="header">Calculadora de números primos: </string>
+    <string name="description">
+               Introduce que numero primo quieres calcular.
+               \nPor ejemplo, si deseas saber el sexto  número primo, pon el numero 6 y dale a calcular
+               \nTe dirá que el sexto número primo es el 11.
+    </string>
+    <string name="labelPosition"> Posicion : </string>
+    <string name="button_action_calculate_text">Calcular!! </string>
+    <string name="preRequest">El primo numero </string>
+    <string name="postRequest"> es el : </string>
+    <string name="errorEntero"> introduce un numero entero positivo distinto que el 0 </string>
+</resources>
