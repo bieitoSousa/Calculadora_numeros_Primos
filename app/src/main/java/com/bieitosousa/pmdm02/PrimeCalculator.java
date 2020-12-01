@@ -74,28 +74,7 @@ public class PrimeCalculator {
         int init = 2;
         int fin = 10000
         try{
-
-            List<Integer> nPrimoList= new ArrayList<Integer>();
-            // entendiendo que el 0 no es un numero natural
-            // comenzamos en el 1.
-            int startIndex = 1;
-            int greater = 1000000;
-            int less = 0;
-            if (number < less && number > greater){
-                throw new Exception(
-                        "The number must be greater than"
-                                + greater
-                                + " and less than" +less );
-            }
-            while (nPrimoList.size() != number){
-                if (esPrimo(startIndex)) {
-                    nPrimoList.add(startIndex);
-                }
-                startIndex++;
-            }
-            // devolvemos el ultimo numero primo (Posicion comienza en 0 , y size en 1)
-            res = nPrimoList.get(nPrimoList.size()-1);
-            return res;
+            // __ IN_PRGOREST ___ //
         }catch(Exception e ){
             System.err.println(e.getMessage());
         }

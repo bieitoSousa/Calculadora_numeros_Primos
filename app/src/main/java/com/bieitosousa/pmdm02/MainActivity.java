@@ -16,6 +16,20 @@ import android.widget.Toast;
 
 /*
         ==========================================================================================
+        =                       ICON UPDATE                                                     =
+        ==========================================================================================
+        #  PATH : app/src/main/AndroidManifest.xml
+        #   <application
+            ...
+             android:icon="@mipmap/{NAME_IMAGEN}}"
+        # add image file in
+            app/src/main/res/drawable-v24 --> round_perm_device_information_24.xml
+            app/src/main/res/mipmap-hdpi -->  round_perm_device_information_black_18.png
+            app/src/main/res/mipmap-mdpi -->   ...
+            app/src/main/res/mipmap-xhdpi -->  ...
+            app/src/main/res/mipmap-xxhdpi --> ...
+            app/src/main/res/mipmap-xxxhdpi --> ...
+        ==========================================================================================
         =                       JAVA -> ANDROID                                                  =
         ==========================================================================================
         #   [https://developer.android.com/guide]
