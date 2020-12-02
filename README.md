@@ -15,6 +15,7 @@
 
         [2]	pego las imagenes en los archivos :
 	            XML --> app/src/main/res/drawable
+		    [round_calculate_24 , sharp_calculate_24 ]
 	            PNG -------------------------------
 	            app/src/main/res/mipmap-hdpi
 	            app/src/main/res/mipmap-mdpi
@@ -23,8 +24,10 @@
 	            app/src/main/res/mipmap-xxxhdpi
 	            ------------------------------------
         [3] EN --> app/src/main/res/mipmap-anydpi-v26
-        	    me creo un archivo lincando el xml (vector -> app/src/main/res/drawable)
-        	    y le doy formato :
+        	    me creo un archivo para :
+		       [1]lincando el xml "vector" --> foreground
+		    	  (vector -> app/src/main/res/drawable) --> [round_calculate_24 , sharp_calculate_24 ]
+        	       [2] dar formato --> background
         	    -----------------------------------------------------------------------------
         	    	<?xml version="1.0" encoding="utf-8"?>
         	    		<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
