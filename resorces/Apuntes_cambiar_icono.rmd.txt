@@ -1,0 +1,45 @@
+IMAGENES
+------------------
+[1]	descargo los iconos --> Android, PNG
+	[NORMAL]
+	https://material.io/resources/icons/?icon=calculate&style=sharp
+	[REDONDO]
+	https://material.io/resources/icons/?icon=calculate&style=round
+
+[2]	pego las imagenes en los archivos :
+	XML --> app/src/main/res/drawable
+	PNG -------------------------------
+	app/src/main/res/mipmap-hdpi
+	app/src/main/res/mipmap-mdpi
+	app/src/main/res/mipmap-xhdpi
+	app/src/main/res/mipmap-xxhdpi
+	app/src/main/res/mipmap-xxxhdpi
+	------------------------------------
+[3] EN --> app/src/main/res/mipmap-anydpi-v26
+	me creo un archivo lincando el xml (vector -> app/src/main/res/drawable)
+	y le doy formato :
+	-----------------------------------------------------------------------------
+		<?xml version="1.0" encoding="utf-8"?>
+			<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+			<background android:drawable="@color/orange_primary"/>
+			<foreground android:drawable="@drawable/round_calculate_24"/>
+			</adaptive-icon>
+	-------------------------------------------------------------------------------
+	<?xml version="1.0" encoding="utf-8"?>
+		<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+		<background android:drawable="@color/orange_primary"/>
+		<foreground android:drawable="@drawable/sharp_calculate_24"/>
+	</adaptive-icon>
+	-------------------------------------------------------------------------------
+[4] EN app/src/main/AndroidManifest.xml --> linco el xml del formato
+	 <application
+        [...]
+        android:icon="@mipmap/sharp_calculate"
+        android:roundIcon="@mipmap/round_calculate"
+	-------------------------------------------------------------------------------
+Forma rapida -> click derecho /res --> new --> imagen Assert
+
+
+=================================================================
+Version rapida :
+
