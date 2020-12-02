@@ -1,6 +1,6 @@
 # Calculadora_numeros_Primos
 
-### ICONO
+## ICONO
 
 ```javascript
 
