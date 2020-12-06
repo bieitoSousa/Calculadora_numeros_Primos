@@ -10,11 +10,14 @@ public class PrimeCalculator {
   él mismo y el 1
  */
     private static List<Integer> nPrimoList= new ArrayList<Integer>();
+    public static int GREATER = 1000000;          // limite superior
+    public static int LESS = 0;                    // limite inferior
     private static boolean esPrimo(int numero){
-        // si el numero es 1 ó 0 es primo
-        if (numero  == 0 || numero == 1){
-            return true;
+        // si el numero es 1 ó 0  NO es primo
+        if (numero == 0 || numero == 1){
+            return false;
         }
+
         // comenzamos en el numero posterior al 1 --> 2
         int contador = 2;
         boolean primo=true;
@@ -40,22 +43,22 @@ public class PrimeCalculator {
             -->     pero entendemos que se van a pedir posiciones 1,....
          */
         try{
-            if(nPrimoList.size()>= number+1){     // si ya lo tenemos en memoria
-                return nPrimoList.get(number);
+            if(nPrimoList.size()>= number){     // si ya lo tenemos en memoria
+                return nPrimoList.get(number-1);
             }else {                             // si no lo tenemos en memoria
-                int startIndex = 1;             //x defecto partimos del inicio [ 0 no es natural]
+                int startIndex = 0;             //x defecto partimos del inicio [ 0 no es natural]
                 if (nPrimoList.size() != 0) {   // si tenemos  nº memoria , partimos de la misma
                     startIndex = nPrimoList.get(nPrimoList.size()-1)+1; //comenzamos en el ultimo numero +1
                 }
                 int greater = 1000000;          // limite superior
                 int less = 0;                    // limite inferior
-                if (number < less && number > greater) {
+                if (number <= LESS || number >= GREATER) {
                     throw new Exception(
                             "The number must be greater than"
                                     + greater
                                     + " and less than" + less);
                 }
-                while (nPrimoList.size() != number+1) {
+                while (nPrimoList.size() != number) {
                     if (esPrimo(startIndex)) {
                         nPrimoList.add(startIndex);
                     }

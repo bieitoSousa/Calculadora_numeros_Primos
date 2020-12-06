@@ -145,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
                                 final String inputNumberString = editText_int_Input.getText().toString(); // input in type String
                                 final int inputNumberInt = Integer.parseInt(inputNumberString);
                                 final String finalRequest = preRequest + " [ " + inputNumberInt + " ] " + postRequest + "=> [ ";
-                                // Filtro numero  entero -1menor o igual que 0
-                                if (inputNumberInt <= 0){
+                                // Filtro numero  entero  menor o igual que 0 , Ó , mayor o igual a 10000
+                                if (inputNumberInt <= PrimeCalculator.LESS || inputNumberInt >= PrimeCalculator.GREATER){
                                     throw new Exception( getString(  R.string.errorEntero));
                                 }
                                 // calculate outputs
